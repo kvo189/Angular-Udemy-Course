@@ -1,0 +1,4 @@
+<label>Enter username</label>
+<input [(ngModel)]="username" class="form-control" type="text">
+<p>{{username}}</p>
+<button [disabled]="isUsernameEmpty()" (click)="resetUsername()" class="btn btn-warning" type="submit">Reset username</button>
