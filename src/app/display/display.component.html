@@ -1,0 +1,17 @@
+<button
+  (click)="onDisplay()"
+  class="btn btn-primary"
+>
+  Display Details
+</button>
+<p *ngIf="isShown">Secret Password: Tuna</p>
+
+<h4>Button clicks log:</h4>
+<ol>
+  <ul
+    *ngFor="let log of loggedBtnClicks; index as i"
+    [ngClass]="{white: i>3}"
+    [ngStyle]="{backgroundColor: i>3 && 'blue', opacity: 1-i/20}"
+    style="list-style: none; padding-left: 0"
+  >{{log}}</ul>
+</ol>
